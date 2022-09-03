@@ -10,4 +10,7 @@ for (var i = 0; i < 10; i++) {
 console.log('\n')
 console.log(3 + 2.1 )
 
+console.log('\n')
 console.log(3 > 2.1 )
+
+console.log('\n')
