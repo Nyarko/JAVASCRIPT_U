@@ -18,3 +18,13 @@ console.log('\n')
 console.log(10 + 52 - 20);
 
 console.log(5%3 + 4*10);
+
+let greetings = 'Hello'
+console.log(greetings + ' Manningson')
+
+console.log('\n')
+const celsius = 12
+const fahrenheit = celsius * 1.8 + 32
+
+console.log('The temperature is ' + fahrenheit)
+console.log('\n')
