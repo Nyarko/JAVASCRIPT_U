@@ -36,3 +36,11 @@ console.log('\n')
 const aLetter = "I won't leave you soon"
 console.log(aLetter[2] + ' and ' + aLetter[5])
 console.log('\n')
+
+//ESCAPING STRINGS FOR SPECIAL CHARACTERS
+console.log('I want to quote \'Life is hard\'')
+console.log('\n')
+console.log('Go left then\nturn right')
+console.log('\n')
+console.log('Go left then\n\tTurn right\n\t\tThen go straight up')
+console.log('\n')
