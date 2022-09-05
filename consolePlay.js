@@ -44,3 +44,15 @@ console.log('Go left then\nturn right')
 console.log('\n')
 console.log('Go left then\n\tTurn right\n\t\tThen go straight up')
 console.log('\n')
+
+//STRING COMPARISON
+console.log('Y' != 'y')
+console.log('\n')
+
+//UNDER OUT TO DINNER QUIZ
+const bill = 10.25+3.99+7.15;
+const tip = bill * 15 / 100;
+const total = bill + tip;
+
+console.log('The total cost is ' + total);
+console.log('\n')
