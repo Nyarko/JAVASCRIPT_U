@@ -32,6 +32,7 @@ const fahrenheit = celsius * 1.8 + 32
 console.log('The temperature is ' + fahrenheit)
 console.log('\n')
 
+//PROPERTIES OF VARIABLES STORING STRINGS AS ARRAY ELEMENTS
 const aLetter = "I won't leave you soon"
 console.log(aLetter[2] + ' and ' + aLetter[5])
 console.log('\n')
