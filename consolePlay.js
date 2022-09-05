@@ -19,6 +19,8 @@ console.log(10 + 52 - 20);
 
 console.log(5%3 + 4*10);
 
+
+//STRING CONCATENATION
 let greetings = 'Hello'
 console.log(greetings + ' Manningson')
 
