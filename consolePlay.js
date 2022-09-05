@@ -54,5 +54,5 @@ const bill = 10.25+3.99+7.15;
 const tip = bill * 15 / 100;
 const total = bill + tip;
 
-console.log('The total cost is ' + total);
+console.log('The total cost is $' + total.toFixed(2));
 console.log('\n')
