@@ -24,6 +24,7 @@ console.log(5%3 + 4*10);
 let greetings = 'Hello'
 console.log(greetings + ' Manningson')
 
+//CONVERTING FROM CELCIUS TO FAHRENHEIT
 console.log('\n')
 const celsius = 12
 const fahrenheit = celsius * 1.8 + 32
