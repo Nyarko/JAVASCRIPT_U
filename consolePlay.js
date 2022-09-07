@@ -65,13 +65,17 @@ const iCI = interact.createInterface({
     output: process.stdout
 })
 
-iCI.question('What number do you want to check?', function (answer){
+iCI.question('*********************************\n'+
+            '**********NumberChecker**********\n' + 
+            'What number do you want to check? ', 
+            function (answer){
     if (answer % 2 == 0) {
-        console.log(answer + ' is even')
+        console.log('\n' + answer + ' is even')
     } else {
-        console.log(answer + ' is odd')
+        console.log('\n' + answer + ' is odd')
     }
     console.log("\nClosing the NumberChecker interface")
+    console.log('\n*********************************\n')
     iCI.close()
 })
 
