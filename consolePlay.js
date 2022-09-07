@@ -67,6 +67,7 @@ const codeContainer = interact.createInterface({
 
 codeContainer.question('Want to run the NumberChecker? ', function (answer) {
     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+        console.log('\nAlright! Running the NumberChecker now:\n')
         runNumberChecker();
     } else {
         console.log('Then closing Query instance')
