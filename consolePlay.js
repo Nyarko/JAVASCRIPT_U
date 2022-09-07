@@ -71,6 +71,7 @@ iCI.question('What number do you want to check?', function (answer){
     } else {
         console.log(answer + ' is odd')
     }
+    console.log("\nClosing the NumberChecker interface")
     iCI.close()
 })
 
