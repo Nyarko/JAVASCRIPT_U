@@ -60,28 +60,25 @@ console.log('\n')
 //EVEN OR ODD MODIFIED
 const interact = require("readline");
 
-const codeContainer = interact.createInterface({
+const rlIntIns /*rl=readline Int=Interface Ins = Instance */ = interact.createInterface({
     input: process.stdin,
     output: process.stdout
 })
 
-codeContainer.question('Want to run the NumberChecker? ', function (answer) {
+rlIntIns.question('Want to run the NumberChecker? ', function (answer) {
     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
         console.log('\nAlright! Running the NumberChecker now:\n')
         runNumberChecker();
     } else {
         console.log('Then closing Query instance')
-        codeContainer.close();
+        rlIntIns.close();
     }
 })
 
 function runNumberChecker() {
-    const iCI = interact.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    })
     
-    iCI.question('*********************************\n'+
+    
+    rlIntIns.question('*********************************\n'+
                 '**********NumberChecker**********\n' + 
                 'What number do you want to check? ', 
                 function (answer){
@@ -92,7 +89,7 @@ function runNumberChecker() {
         }
         console.log("\nClosing the NumberChecker interface")
         console.log('\n*********************************\n')
-        iCI.close()
+        rlIntIns.close()
     })
 }
 
