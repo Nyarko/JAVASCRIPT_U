@@ -44,3 +44,14 @@ function runNumberChecker() {
                             })
     })
 };
+
+
+rLII.question('Want to run the MusicGroupChecker?\n', function (answer) {
+    if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+        console.log('\n\tAlright!\nRunning the MusicGroupChecker now:\n')
+        runNumberChecker();
+    } else {
+        console.log('Then closing Query instance')
+        rLII.close();
+    }
+});
