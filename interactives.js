@@ -24,7 +24,6 @@ rLII.question('Which <name>Checker do you wanna run?\n' +
 
 function runNumberChecker() {
     
-    
     rLII.question('***********************************\n'+
                 '***********NumberChecker***********\n' + 
                 '\nWhat number do you want to check?\n', 
@@ -54,13 +53,37 @@ function runNumberChecker() {
 
 
 function runMusicGroupChecker() {
-    rLII.question('Want to run the MusicGroupChecker?\n', function (answer) {
-        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-            console.log('\n\tAlright!\nRunning the MusicGroupChecker now:\n')
-            runNumberChecker();
-        } else {
-            console.log('Then closing Query instance')
-            rLII.close();
-        }
-    });
+    rLII.question('***********************************\n'+
+                '********MusicGroupChecker********\n' + 
+                '\nWhat is the number of people in the Group?\n', 
+                function (musicians){
+                    if (musicians <= 0) {
+                        console.log('Not a group')
+                    } else if (musicians == 1) {
+                        console.log('This is a \'Solo\'.')
+                    } else if (musicians == 2) {
+                        console.log('This is a \'Duet\'.')
+                    } else if (musicians === 3) {
+                        console.log("This is a \'trio\'.");
+                    } else if (musicians === 4) {
+                        console.log("This is a \'quartet\'");
+                    } else {
+                        console.log("This is a large group");
+                    }
+
+        rLII.question('\nWish to check for a different group? ',
+                            function (answer) {
+                                if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                                    console.log('\n\tOkay!\nRunning the MusicGroupChecker again:\n')
+                                    runMusicGroupChecker();
+                                } else {
+                                    console.log('\nUnderstood!')
+                                    console.log("\nClosing the MusicGroupChecker interface")
+                                    console.log('\n\tClosing Query interface')
+                                    console.log('\n************/*/Goodbye/*/***********\n')
+                                    console.log('************************************\n')
+                                    rLII.close()
+                                }
+                            })
+    })
 }
