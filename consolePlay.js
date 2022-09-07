@@ -72,26 +72,26 @@ codeContainer.question('Want to run the NumberChecker? ', function (answer) {
 })
 
 function runNumberChecker() {
+    const iCI = interact.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    })
     
+    iCI.question('*********************************\n'+
+                '**********NumberChecker**********\n' + 
+                'What number do you want to check? ', 
+                function (answer){
+        if (answer % 2 == 0) {
+            console.log('\n' + answer + ' is even')
+        } else {
+            console.log('\n' + answer + ' is odd')
+        }
+        console.log("\nClosing the NumberChecker interface")
+        console.log('\n*********************************\n')
+        iCI.close()
+    })
 }
-const iCI = interact.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
 
-iCI.question('*********************************\n'+
-            '**********NumberChecker**********\n' + 
-            'What number do you want to check? ', 
-            function (answer){
-    if (answer % 2 == 0) {
-        console.log('\n' + answer + ' is even')
-    } else {
-        console.log('\n' + answer + ' is odd')
-    }
-    console.log("\nClosing the NumberChecker interface")
-    console.log('\n*********************************\n')
-    iCI.close()
-})
 
 /*const userInput = prompt("Number to check for odd or even:");
 if (userInput % 2 == 0) {
