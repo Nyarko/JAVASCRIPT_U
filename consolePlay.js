@@ -94,13 +94,12 @@ function runNumberChecker() {
                                     console.log('\nAlright! Running the NumberChecker now:\n')
                                     runNumberChecker();
                                 } else {
-                                    console.log('Then closing Query instance')
-                                    rLII.close();
+                                    console.log("\nClosing the NumberChecker interface")
+                                    console.log('\n\tClosing Query interface')
+                                    console.log('\n*********************************\n')
+                                    rLII.close()
                                 }
                             })
-        console.log("\nClosing the NumberChecker interface")
-        console.log('\n*********************************\n')
-        rLII.close()
     })
 }
 
