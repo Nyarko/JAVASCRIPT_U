@@ -65,6 +65,14 @@ const iCI = interact.createInterface({
     output: process.stdout
 })
 
+iCI.question('What number do you want to check?', (answer){
+    if (answer % 2 == 0) {
+        console.log(answer + ' is even')
+    } else {
+        console.log(answer + ' is odd')
+    }
+})
+
 /*const userInput = prompt("Number to check for odd or even:");
 if (userInput % 2 == 0) {
     console.log('This is even')
