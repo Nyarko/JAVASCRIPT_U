@@ -58,6 +58,8 @@ console.log('The total cost is $' + total.toFixed(2));
 console.log('\n')
 
 //EVEN OR ODD MODIFIED
+const interact = require("readline");
+
 
 
 /*const userInput = prompt("Number to check for odd or even:");
