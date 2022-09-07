@@ -21,15 +21,6 @@ rLII.question('Which <name>Checker do you wanna run?\n' +
     }
 });
 
-rLII.question('Want to run the NumberChecker?\n', function (answer) {
-    if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
-        runNumberChecker();
-    } else {
-        console.log('Then closing Query instance')
-        rLII.close();
-    }
-});
 
 function runNumberChecker() {
     
@@ -62,12 +53,14 @@ function runNumberChecker() {
 };
 
 
-rLII.question('Want to run the MusicGroupChecker?\n', function (answer) {
-    if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-        console.log('\n\tAlright!\nRunning the MusicGroupChecker now:\n')
-        runNumberChecker();
-    } else {
-        console.log('Then closing Query instance')
-        rLII.close();
-    }
-});
+function runMusicGroupChecker() {
+    rLII.question('Want to run the MusicGroupChecker?\n', function (answer) {
+        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+            console.log('\n\tAlright!\nRunning the MusicGroupChecker now:\n')
+            runNumberChecker();
+        } else {
+            console.log('Then closing Query instance')
+            rLII.close();
+        }
+    });
+}
