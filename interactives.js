@@ -12,6 +12,9 @@ rLII.question('Which <name>Checker do you wanna run?\n' +
     if (answer == '1'){
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
         runNumberChecker();
+    } else if (answer == '2') {
+        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
+        runNumberChecker()
     } else {
         console.log('Then closing Query instance')
         rLII.close();
