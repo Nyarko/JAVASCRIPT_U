@@ -80,7 +80,7 @@ function runNumberChecker() {
     
     rLII.question('***********************************\n'+
                 '***********NumberChecker***********\n' + 
-                'What number do you want to check?\n', 
+                '\nWhat number do you want to check?\n', 
                 function (answer){
         if (answer % 2 == 0) {
             console.log('\n' + answer + ' is even')
@@ -94,7 +94,7 @@ function runNumberChecker() {
                                     console.log('\n\tOkay!\nRunning the NumberChecker again:\n')
                                     runNumberChecker();
                                 } else {
-                                    console.log('\n\t\tUnderstood!')
+                                    console.log('\nUnderstood!')
                                     console.log("\nClosing the NumberChecker interface")
                                     console.log('\n\tClosing Query interface')
                                     console.log('\n************/*/Goodbye/*/***********\n')
