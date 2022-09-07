@@ -60,6 +60,11 @@ console.log('\n')
 //EVEN OR ODD MODIFIED
 const interact = require("readline");
 
+const codeContainer = interact.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
 const iCI = interact.createInterface({
     input: process.stdin,
     output: process.stdout
