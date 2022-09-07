@@ -5,6 +5,19 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
     output: process.stdout
 });
 
+rLII.question('Which <name>Checker do you wanna run?\n' + 
+                'Choose by typing the corresponding number:\n' + 
+                '1. NumberChecker' +
+                '2. MusicGroupChecker', function (answer) {
+    if (answer == '1'){
+        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
+        runNumberChecker();
+    } else {
+        console.log('Then closing Query instance')
+        rLII.close();
+    }
+});
+
 rLII.question('Want to run the NumberChecker?\n', function (answer) {
     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
