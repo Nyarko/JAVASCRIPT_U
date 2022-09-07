@@ -65,7 +65,7 @@ const iCI = interact.createInterface({
     output: process.stdout
 })
 
-iCI.question('What number do you want to check?', (answer){
+iCI.question('What number do you want to check?', function (answer){
     if (answer % 2 == 0) {
         console.log(answer + ' is even')
     } else {
