@@ -85,3 +85,10 @@ if (musicians <= 0) {
 } else {
     console.log("this is a large group");
 }
+
+
+//MURDER MYSTERY
+const weapon = '';
+const room = '';
+const suspect = '';
+
