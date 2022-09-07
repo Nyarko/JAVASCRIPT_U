@@ -63,7 +63,7 @@ const interact = require("readline");
 const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterface({
     input: process.stdin,
     output: process.stdout
-})
+});
 
 rLII.question('Want to run the NumberChecker?\n', function (answer) {
     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
@@ -73,7 +73,7 @@ rLII.question('Want to run the NumberChecker?\n', function (answer) {
         console.log('Then closing Query instance')
         rLII.close();
     }
-})
+});
 
 function runNumberChecker() {
     
@@ -103,7 +103,7 @@ function runNumberChecker() {
                                 }
                             })
     })
-}
+};
 
 
 /*const userInput = prompt("Number to check for odd or even:");
@@ -113,9 +113,10 @@ if (userInput % 2 == 0) {
     console.log('This is odd')
 }
 console.log('\n')*/
-
+rLII.close();
 
 //MUSICAL GROUPS
+console.log('\n')
 
 //INTERACTIVE:
 
