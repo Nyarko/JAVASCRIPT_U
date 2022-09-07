@@ -60,7 +60,10 @@ console.log('\n')
 //EVEN OR ODD MODIFIED
 const interact = require("readline");
 
-
+const rCI = interact.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
 
 /*const userInput = prompt("Number to check for odd or even:");
 if (userInput % 2 == 0) {
