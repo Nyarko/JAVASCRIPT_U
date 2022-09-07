@@ -65,6 +65,12 @@ const codeContainer = interact.createInterface({
     output: process.stdout
 })
 
+codeContainer.question('Want to run the NumberChecker? ', function (answer) {
+    if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+        runNumberChecker();
+    }
+})
+
 const iCI = interact.createInterface({
     input: process.stdin,
     output: process.stdout
