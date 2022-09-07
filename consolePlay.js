@@ -71,9 +71,8 @@ iCI.question('What number do you want to check?', function (answer){
     } else {
         console.log(answer + ' is odd')
     }
+    iCI.close()
 })
-
-iCI.close()
 
 /*const userInput = prompt("Number to check for odd or even:");
 if (userInput % 2 == 0) {
