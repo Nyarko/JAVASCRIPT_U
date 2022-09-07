@@ -66,9 +66,9 @@ function runMusicGroupChecker() {
                     } else if (musicians === 3) {
                         console.log("This is a \'trio\'.");
                     } else if (musicians === 4) {
-                        console.log("This is a \'quartet\'");
+                        console.log("This is a \'quartet\'.");
                     } else {
-                        console.log("This is a large group");
+                        console.log("This is a large group!");
                     }
 
         rLII.question('\nWish to check for a different group? ',
