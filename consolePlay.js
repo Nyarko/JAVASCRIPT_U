@@ -65,9 +65,9 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
     output: process.stdout
 })
 
-rLII.question('Want to run the NumberChecker? ', function (answer) {
+rLII.question('Want to run the NumberChecker?\n', function (answer) {
     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-        console.log('\nAlright! Running the NumberChecker now:\n')
+        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
         runNumberChecker();
     } else {
         console.log('Then closing Query instance')
@@ -78,9 +78,9 @@ rLII.question('Want to run the NumberChecker? ', function (answer) {
 function runNumberChecker() {
     
     
-    rLII.question('*********************************\n'+
-                '**********NumberChecker**********\n' + 
-                'What number do you want to check? ', 
+    rLII.question('***********************************\n'+
+                '***********NumberChecker***********\n' + 
+                'What number do you want to check?\n', 
                 function (answer){
         if (answer % 2 == 0) {
             console.log('\n' + answer + ' is even')
@@ -88,15 +88,17 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         }
 
-        rLII.question('Do you wish to check a different number? ',
+        rLII.question('\nWish to check a different number? ',
                             function (answer) {
                                 if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                                    console.log('\nAlright! Running the NumberChecker now:\n')
+                                    console.log('\n\tOkay!\nRunning the NumberChecker again:\n')
                                     runNumberChecker();
                                 } else {
+                                    console.log('\n\tUnderstood!')
                                     console.log("\nClosing the NumberChecker interface")
                                     console.log('\n\tClosing Query interface')
-                                    console.log('\n*********************************\n')
+                                    console.log('\n************/*/Goodbye/*/***********\n')
+                                    console.log('************************************\n')
                                     rLII.close()
                                 }
                             })
