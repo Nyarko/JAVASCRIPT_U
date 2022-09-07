@@ -87,6 +87,17 @@ function runNumberChecker() {
         } else {
             console.log('\n' + answer + ' is odd')
         }
+
+        rLII.question('Do you wish to check a different number? ',
+                            function (answer) {
+                                if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                                    console.log('\nAlright! Running the NumberChecker now:\n')
+                                    runNumberChecker();
+                                } else {
+                                    console.log('Then closing Query instance')
+                                    rLII.close();
+                                }
+                            })
         console.log("\nClosing the NumberChecker interface")
         console.log('\n*********************************\n')
         rLII.close()
