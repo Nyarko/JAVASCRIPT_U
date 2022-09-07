@@ -94,7 +94,7 @@ function runNumberChecker() {
                                     console.log('\n\tOkay!\nRunning the NumberChecker again:\n')
                                     runNumberChecker();
                                 } else {
-                                    console.log('\n\tUnderstood!')
+                                    console.log('\n\t\tUnderstood!')
                                     console.log("\nClosing the NumberChecker interface")
                                     console.log('\n\tClosing Query interface')
                                     console.log('\n************/*/Goodbye/*/***********\n')
