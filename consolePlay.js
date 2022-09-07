@@ -58,10 +58,12 @@ console.log('The total cost is $' + total.toFixed(2));
 console.log('\n')
 
 //EVEN OR ODD MODIFIED
-const userInput = 9;
+
+
+/*const userInput = prompt("Number to check for odd or even:");
 if (userInput % 2 == 0) {
     console.log('This is even')
 } else {
     console.log('This is odd')
 }
-console.log('\n')
+console.log('\n')*/
