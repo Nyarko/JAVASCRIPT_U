@@ -7,14 +7,14 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
 
 rLII.question('Which <name>Checker do you wanna run?\n' + 
                 'Choose by typing the corresponding number:\n' + 
-                '1. NumberChecker' +
-                '2. MusicGroupChecker', function (answer) {
+                '1. NumberChecker\n' +
+                '2. MusicGroupChecker\n', function (answer) {
     if (answer == '1'){
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
         runNumberChecker();
     } else if (answer == '2') {
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
-        runNumberChecker()
+        runMusicGroupChecker()
     } else {
         console.log('Then closing Query instance')
         rLII.close();
