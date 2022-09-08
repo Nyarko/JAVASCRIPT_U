@@ -100,5 +100,17 @@ if not try again or close
 */
 
 if (room == 'dining room' && suspect == 'Mr Parks') {
+    weapon = 'knife'
     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+} else if (room == 'gallary' && suspect == 'Mrs Van Cleve') {
+    weapon = 'gallery'
+    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+} else if (room == 'billiards room' && suspect == 'Mrs Sparr') {
+    weapon = 'pool stick'
+    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+} else if (room == 'ballroom' && suspect == 'Mr Kalehoff') {
+    weapon = 'poison'
+    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+} else {
+    console.log('The case is not solved!')
 }
