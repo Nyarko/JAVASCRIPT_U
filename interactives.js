@@ -133,10 +133,10 @@ function runMurderMystery() {
                         '1. Mr Parkes\n' + '2. Ms Van Cleve\n' +
                         '3. Mrs Sparr\n' + '4. Mr Kalehoff\n',
                             function (answer) {
-                                if (answer == 1) {
+                                if (answer == 1 && room == 'dining room') {
                                     suspect = '\nMr Parkes';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-                                } else if (answer == 2) {
+                                } else if (answer == 2 && room == 'gallery') {
                                     suspect = '\nMs Van Cleve';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else if (answer == 3) {
