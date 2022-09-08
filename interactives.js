@@ -149,7 +149,7 @@ function runMurderMystery() {
                                 } else {
                                     console.log('The case is not solved!\n')
                                 }
-                            }
+                            
             rLII.question('\nWish to play the game again? ',
                                 function (answer) {
                                     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
