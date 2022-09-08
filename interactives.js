@@ -104,7 +104,7 @@ function runMurderMystery() {
                 '***********MurderMystery***********\n' + 
                 '\nChoose the room to investigate\n' +
                 '1. Dining room\n'+ '2. Gallary\n' + 
-                '3. Billards room' + '4. Ballroom', 
+                '3. Billards room\n' + '4. Ballroom\n', 
                 function (choiceMade){
                     let weapon = '';
                     let room = "";
@@ -128,19 +128,28 @@ function runMurderMystery() {
                         console.log('The selected room is ' + room + '.');
                     }
 
-        rLII.question('\nWho is the suspect here? ',
+        rLII.question('\nWho is the suspect here? '+
+                        '\nType in the number before suspect name\n' +
+                        '1. Mr Parkes\n' + '2. Ms Van Cleve\n' +
+                        '3. Mrs Sparr\n' + '4. Mr Kalehoff\n',
                             function (answer) {
-                                if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                                    console.log('\n\tOkay!\nRunning the MusicGroupChecker again:\n')
-                                    runMusicGroupChecker();
+                                if (answer == 1) {
+                                    suspect = 'Mr Parkes';
+                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                } else if (answer == 2) {
+                                    suspect = 'Ms Van Cleve';
+                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                } else if (answer == 3) {
+                                    suspect = 'Mrs Sparr';
+                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                } else if (answer == 4) {
+                                    suspect = 'Mr Kalehoff';
+                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else {
-                                    console.log('\nUnderstood!')
-                                    console.log("\nClosing the MusicGroupChecker interface")
-                                    console.log('\n\tClosing Query interface')
-                                    console.log('\n************/*/Goodbye/*/***********\n')
-                                    console.log('************************************\n')
-                                    rLII.close()
+                                    console.log('The case is not solved!')
                                 }
+                                
                             })
     })
 }
+
