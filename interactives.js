@@ -139,10 +139,10 @@ function runMurderMystery() {
                                 } else if (answer == 2 && room == 'gallery') {
                                     suspect = '\nMs Van Cleve';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-                                } else if (answer == 3) {
+                                } else if (answer == 3 && room == 'billiards room') {
                                     suspect = '\nMrs Sparr';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-                                } else if (answer == 4) {
+                                } else if (answer == 4 && room == 'ballroom') {
                                     suspect = '\nMr Kalehoff';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else {
