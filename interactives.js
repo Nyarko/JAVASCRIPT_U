@@ -99,18 +99,48 @@ if answer matches, mystery solved
 if not try again or close
 */
 
-if (room == 'dining room' && suspect == 'Mr Parks') {
-    weapon = 'knife'
-    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-} else if (room == 'gallary' && suspect == 'Mrs Van Cleve') {
-    weapon = 'gallery'
-    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-} else if (room == 'billiards room' && suspect == 'Mrs Sparr') {
-    weapon = 'pool stick'
-    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-} else if (room == 'ballroom' && suspect == 'Mr Kalehoff') {
-    weapon = 'poison'
-    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
-} else {
-    console.log('The case is not solved!')
+function runMurderMystery() {
+    rLII.question('***********************************\n'+
+                '***********MurderMystery***********\n' + 
+                '\nChoose the room to investigate\n' +
+                '1. Dining room\n'+ '2. Gallary\n' + 
+                '3. Billards room' + '4. Ballroom', 
+                function (choiceMade){
+                    let weapon = '';
+                    let room = "";
+                    let suspect = "";
+
+                    if (choiceMade == 1) {
+                        room = 'dining room';
+                        weapon = 'knife';
+                        console.log('The selected room is ' + room + '.');
+                    } else if (choiceMade == 2) {
+                        room = 'gallery';
+                        weapon = 'trophy';
+                        console.log('The selected room is ' + room + '.');
+                    } else if (choiceMade == 3) {
+                        room = 'billiards room';
+                        weapon = 'pool stick';
+                        console.log('The selected room is ' + room + '.');
+                    } else if (choiceMade === 4) {
+                        room = 'ballroom';
+                        weapon = 'poison';
+                        console.log('The selected room is ' + room + '.');
+                    }
+
+        rLII.question('\nWho is the suspect here? ',
+                            function (answer) {
+                                if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                                    console.log('\n\tOkay!\nRunning the MusicGroupChecker again:\n')
+                                    runMusicGroupChecker();
+                                } else {
+                                    console.log('\nUnderstood!')
+                                    console.log("\nClosing the MusicGroupChecker interface")
+                                    console.log('\n\tClosing Query interface')
+                                    console.log('\n************/*/Goodbye/*/***********\n')
+                                    console.log('************************************\n')
+                                    rLII.close()
+                                }
+                            })
+    })
 }
