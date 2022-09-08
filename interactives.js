@@ -87,3 +87,10 @@ function runMusicGroupChecker() {
                             })
     })
 }
+
+/*
+Disply choose room
+ask user to quess who is in the room
+if answer matches, mystery solved
+if not try again or close
+*/

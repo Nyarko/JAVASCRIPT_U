@@ -92,3 +92,13 @@ const weapon = '';
 const room = '';
 const suspect = '';
 
+/*
+Disply choose room
+ask user to quess who is in the room
+if answer matches, mystery solved
+if not try again or close
+*/
+
+if (room == 'dining room' && suspect == 'Mr Parks') {
+    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+}
