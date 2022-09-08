@@ -123,7 +123,7 @@ function runMurderMystery() {
                         room = 'billiards room';
                         weapon = 'pool stick';
                         console.log('The selected room is ' + room + '.');
-                    } else if (choiceMade == 4) {
+                    } else if (choiceMade === '4') {
                         room = 'ballroom';
                         weapon = 'poison';
                         console.log('The selected room is ' + room + '.');
