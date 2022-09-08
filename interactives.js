@@ -134,21 +134,34 @@ function runMurderMystery() {
                         '3. Mrs Sparr\n' + '4. Mr Kalehoff\n',
                             function (answer) {
                                 if (answer == 1) {
-                                    suspect = 'Mr Parkes';
+                                    suspect = '\nMr Parkes';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else if (answer == 2) {
-                                    suspect = 'Ms Van Cleve';
+                                    suspect = '\nMs Van Cleve';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else if (answer == 3) {
-                                    suspect = 'Mrs Sparr';
+                                    suspect = '\nMrs Sparr';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else if (answer == 4) {
-                                    suspect = 'Mr Kalehoff';
+                                    suspect = '\nMr Kalehoff';
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else {
-                                    console.log('The case is not solved!')
+                                    console.log('The case is not solved!\n')
                                 }
-                                
+            rLII.question('\nWish to play the game again? ',
+                                function (answer) {
+                                    if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                                        console.log('\n\tOkay!\nRunning the MurderMystery Game again:\n')
+                                        runMurderMystery();
+                                    } else {
+                                        console.log('\nUnderstood!')
+                                        console.log("\nClosing the MurderMystery Game interface")
+                                        console.log('\n\tClosing Query interface')
+                                        console.log('\n************/*/Goodbye/*/***********\n')
+                                        console.log('************************************\n')
+                                        rLII.close()
+                                    }
+                                })
                             })
     })
 }
