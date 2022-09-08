@@ -123,10 +123,14 @@ function runMurderMystery() {
                         room = 'billiards room';
                         weapon = 'pool stick';
                         console.log('The selected room is ' + room + '.');
-                    } else if (choiceMade === 4) {
+                    } else if (choiceMade == 4) {
                         room = 'ballroom';
                         weapon = 'poison';
                         console.log('The selected room is ' + room + '.');
+                    } else {
+                        console.log('You made the wrong selection\n' +
+                        'Please try with the correct response\n');
+                        runMurderMystery();
                     }
 
         rLII.question('\nWho is the suspect here? '+
