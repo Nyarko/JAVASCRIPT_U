@@ -5,7 +5,8 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
     output: process.stdout
 });
 
-rLII.question('Which <name>Checker do you wanna run?\n' + 
+rLII.question('\n\tWelcome Dear User' + 
+                '\nWhich APP do you wanna run?\n' + 
                 'Choose by typing the corresponding number:\n' + 
                 '1. NumberChecker\n' +
                 '2. MusicGroupChecker\n' + 
@@ -103,8 +104,8 @@ function runMurderMystery() {
     rLII.question('***********************************\n'+
                 '***********MurderMystery***********\n' + 
                 '\nChoose the room to investigate\n' +
-                '1. Dining room\n'+ '2. Gallary\n' + 
-                '3. Billards room\n' + '4. Ballroom\n', 
+                '1. Dining room\n'+ '2. Gallery\n' + 
+                '3. Billiards room\n' + '4. Ballroom\n', 
                 function (choiceMade){
                     let weapon = '';
                     let room = "";
@@ -148,6 +149,7 @@ function runMurderMystery() {
                                 } else {
                                     console.log('The case is not solved!\n')
                                 }
+                            }
             rLII.question('\nWish to play the game again? ',
                                 function (answer) {
                                     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
