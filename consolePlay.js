@@ -88,6 +88,7 @@ if (musicians <= 0) {
 
 
 //MURDER MYSTERY
+let solved = '';
 let weapon = '';
 const room = 'dining room';
 const suspect = 'Mr Park';
@@ -101,6 +102,7 @@ if not try again or close
 
 if (room == 'dining room' && suspect == 'Mr Parks') {
     weapon = 'knife'
+    
     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
 } else if (room == 'gallary' && suspect == 'Mrs Van Cleve') {
     weapon = 'gallery'
