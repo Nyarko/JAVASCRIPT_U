@@ -142,7 +142,7 @@ function runMurderMystery() {
                         '1. Mr Parkes\n' + '2. Ms Van Cleve\n' +
                         '3. Mrs Sparr\n' + '4. Mr Kalehoff\n',
                             function (answer) {
-                                solved = '';
+                                //solved = '';
                                 if (answer == 1 && room == 'dining room') {
                                     suspect = '\nMr Parkes';
                                     solved = true
