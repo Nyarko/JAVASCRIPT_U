@@ -90,7 +90,7 @@ if (musicians <= 0) {
 //MURDER MYSTERY
 let weapon = '';
 const room = 'dining room';
-const suspect = 'Mr Parks';
+const suspect = 'Mr Park';
 
 /*
 Disply choose room
