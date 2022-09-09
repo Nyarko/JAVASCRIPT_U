@@ -10,7 +10,8 @@ rLII.question('\n\tWelcome Dear User' +
                 'Choose by typing the corresponding number:\n' + 
                 '1. NumberChecker\n' +
                 '2. MusicGroupChecker\n' + 
-                '3. MurderMystery Game\n', function (answer) {
+                '3. MurderMystery Game\n' +
+                '4. BalanceChecker\n', function (answer) {
     if (answer == '1'){
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
         runNumberChecker();
