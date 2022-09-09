@@ -88,7 +88,7 @@ if (musicians <= 0) {
 
 
 //MURDER MYSTERY
-let solved = '';
+let solved = false;
 let weapon = '';
 const room = 'dining room';
 const suspect = 'Mr Parks';
