@@ -144,15 +144,19 @@ function runMurderMystery() {
                             function (answer) {
                                 if (answer == 1 && room == 'dining room') {
                                     suspect = '\nMr Parkes';
-                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                    solved = true
                                 } else if (answer == 2 && room == 'gallery') {
                                     suspect = '\nMs Van Cleve';
-                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                    solved = true
                                 } else if (answer == 3 && room == 'billiards room') {
                                     suspect = '\nMrs Sparr';
-                                    console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
+                                    solved = true
                                 } else if (answer == 4 && room == 'ballroom') {
                                     suspect = '\nMr Kalehoff';
+                                    solved = true
+                                } 
+
+                                if (solved === true) {
                                     console.log(suspect +' did it in the ' + room + ' with the ' + weapon + '!')
                                 } else {
                                     console.log('The case is not solved!\n')
