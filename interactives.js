@@ -185,3 +185,6 @@ function runMurderMystery() {
     })
 }
 
+function runBalanceChecker() {
+    lififif
+}
