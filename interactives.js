@@ -21,6 +21,9 @@ rLII.question('\n\tWelcome Dear User' +
     } else if (answer == '3'){
         console.log('\n\tAlright!\nRunning the MurderMystery Game now:\n')
         runMurderMystery();
+    } else if (answer == '4'){
+        console.log('\n\tAlright!\nRunning the BalanceChecker now:\n')
+        runBalanceChecker();
     } else {
         console.log('Then closing Query instance')
         rLII.close();
