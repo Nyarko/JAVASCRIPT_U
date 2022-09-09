@@ -107,6 +107,7 @@ function runMurderMystery() {
                 '1. Dining room\n'+ '2. Gallery\n' + 
                 '3. Billiards room\n' + '4. Ballroom\n', 
                 function (choiceMade){
+                    let solved = '';
                     let weapon = '';
                     let room = "";
                     let suspect = "";
@@ -114,19 +115,22 @@ function runMurderMystery() {
                     if (choiceMade == 1) {
                         room = 'dining room';
                         weapon = 'knife';
-                        console.log('The selected room is ' + room + '.');
+                        solved = true;
                     } else if (choiceMade == 2) {
                         room = 'gallery';
                         weapon = 'trophy';
-                        console.log('The selected room is ' + room + '.');
+                        solved = true;
                     } else if (choiceMade == 3) {
                         room = 'billiards room';
                         weapon = 'pool stick';
-                        console.log('The selected room is ' + room + '.');
+                        solved = true;
                     } else if (choiceMade === '4') {
                         room = 'ballroom';
                         weapon = 'poison';
-                        console.log('The selected room is ' + room + '.');
+                        solved = true;
+                    } 
+                    if (solved === true) {
+                        console.log('The selected room is ' + room + '.')
                     } else {
                         console.log('You made the wrong selection\n' +
                         'Please try with the correct response\n');
