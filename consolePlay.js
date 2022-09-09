@@ -91,7 +91,7 @@ if (musicians <= 0) {
 let solved = '';
 let weapon = '';
 const room = 'dining room';
-const suspect = 'Mr Park';
+const suspect = 'Mr Parks';
 
 /*
 Disply choose room
