@@ -107,7 +107,7 @@ function runMurderMystery() {
                 '1. Dining room\n'+ '2. Gallery\n' + 
                 '3. Billiards room\n' + '4. Ballroom\n', 
                 function (choiceMade){
-                    let solved = '';
+                    let solved = false;
                     let weapon = '';
                     let room = "";
                     let suspect = "";
