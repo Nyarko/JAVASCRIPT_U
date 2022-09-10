@@ -49,7 +49,7 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         }
 
-        while (appName == 'NumberChecker') {
+        if (appName == 'NumberChecker') {
             questionAsked = '\nWish to check a different number? '
             functionRan = runNumberChecker()
             goodByeClosing(questionAsked,functionRan,appName)
