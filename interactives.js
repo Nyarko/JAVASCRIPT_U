@@ -195,7 +195,7 @@ function runBalanceChecker() {
                     if (answer == 1) {
                         checkBalance = true;
                         //ask account active, then go to ask account balance
-                        rLII.question('\nIs your account active? ' +
+                        rLII.question('\nIs your account active?\n' +
                                     '1. Yes\n'+ '2. No\n' + 
                                     '\nYour answer: ', function(answer) {
                                         if (answer == 1) {
@@ -213,11 +213,42 @@ function runBalanceChecker() {
                                                         })
                                         } else if (answer == 2) {
                                             isActive = false
-                                            console.log('Your account is no longer active')
+                                            console.log('Your account is no longer active.\n')
                                         }
+                                        rLII.question('Do you wish to do another balance check? \n' + 
+                                                    '1. Yes\n' + '2. No\n' + 
+                                                    '\nYour answer: ', function (answer) {
+                                                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                                                            console.log('\n\tOkay!\nRunning the BalanceChecker again:\n')
+                                                            runMurderMystery();
+                                                        } else {
+                                                            console.log('\nUnderstood!')
+                                                            console.log("\nClosing the BalanceChecker interface")
+                                                            console.log('\n\tClosing Query interface')
+                                                            console.log('\n************/*/Goodbye/*/***********\n')
+                                                            console.log('************************************\n')
+                                                            rLII.close()
+                                                        }
+                                                    })
                         })
                     } else if (answer == 2) {
-                        console.log('Thank you. Have a nice day!')
+                        console.log('\nThank you. Have a nice day!')
                     }
+
+                    rLII.question('Do you wish to do another balance check? \n' + 
+                    '1. Yes\n' + '2. No\n' + 
+                    '\nYour answer: ', function (answer) {
+                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                            console.log('\n\tOkay!\nRunning the BalanceChecker again:\n')
+                            runMurderMystery();
+                        } else {
+                            console.log('\nUnderstood!')
+                            console.log("\nClosing the BalanceChecker interface")
+                            console.log('\n\tClosing Query interface')
+                            console.log('\n************/*/Goodbye/*/***********\n')
+                            console.log('************************************\n')
+                            rLII.close()
+                        }
+                    })
     })
 }
