@@ -186,5 +186,7 @@ function runMurderMystery() {
 }
 
 function runBalanceChecker() {
-    lififif
+    rLII.question('string?', function(answer) {
+        
+    })
 }
