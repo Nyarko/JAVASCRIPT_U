@@ -51,6 +51,7 @@ function runNumberChecker() {
         while (appName == 'NumberChecker') {
             questionAsked = '\nWish to check a different number? '
             functionRan = runNumberChecker()
+            goodByeClosing(questionAsked,functionRan,appName)
         }rLII.question('\nWish to check a different number? ',
                             function (answer) {
                                 if (answer == 'Yes' || answer == "yes" || answer == 'y'){
@@ -247,16 +248,16 @@ function runBalanceChecker() {
     })
 }
 
-function goodByeClosing () {
-    rLII.question('Do you wish to do another balance check? \n' + 
+function goodByeClosing (questionAsked,functionRan,appName) {
+    rLII.question(questionAsked + 
                     '1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ', function (answer) {
                         if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                            console.log('\n\tOkay!\nRunning the BalanceChecker again:\n')
-                            runMurderMystery();
+                            console.log('\n\tOkay!\nRunning the '+ appName +' again:\n')
+                            functionRan;
                         } else {
                             console.log('\nUnderstood!')
-                            console.log("\nClosing the BalanceChecker interface")
+                            console.log("\nClosing the "+ appName +" interface")
                             console.log('\n\tClosing Query interface')
                             console.log('\n************/*/Goodbye/*/***********\n')
                             console.log('************************************\n')
