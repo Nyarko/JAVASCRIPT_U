@@ -187,7 +187,15 @@ function runMurderMystery() {
 
 function runBalanceChecker() {
     let balance = '', isActive = '', checkBalance = '';
-    rLII.question('string?', function(answer) {
+    rLII.question('***********************************\n'+
+                '***********BalanceChecker***********\n' + 
+                '\nWish to check your balance?\n' +
+                '1. Yes\n'+ '2. No\n' + 
+                '\nYour answer: ', function(answer) {
+                    if (answer == 1) {
 
+                    } else if (answer == 2) {
+                        console.log('Thank you. Have a nice day!')
+                    }
     })
 }
