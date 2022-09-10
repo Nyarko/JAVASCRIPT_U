@@ -12,6 +12,7 @@ rLII.question('\n\tWelcome Dear User' +
                 '2. MusicGroupChecker\n' + 
                 '3. MurderMystery Game\n' +
                 '4. BalanceChecker\n', function (answer) {
+                    let appName = '';
     if (answer == '1'){
         console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
         runNumberChecker();
@@ -235,7 +236,12 @@ function runBalanceChecker() {
                         console.log('\nThank you. Have a nice day!')
                     }
 
-                    rLII.question('Do you wish to do another balance check? \n' + 
+                    goodByeClosing()
+    })
+}
+
+function goodByeClosing () {
+    rLII.question('Do you wish to do another balance check? \n' + 
                     '1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ', function (answer) {
                         if (answer == 'Yes' || answer == "yes" || answer == 'y'){
@@ -250,5 +256,4 @@ function runBalanceChecker() {
                             rLII.close()
                         }
                     })
-    })
 }
