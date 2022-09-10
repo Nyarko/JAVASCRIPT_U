@@ -14,16 +14,20 @@ rLII.question('\n\tWelcome Dear User' +
                 '4. BalanceChecker\n', function (answer) {
                     let appName = '';
     if (answer == '1'){
-        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
+        appName = 'NumberChecker'
+        console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runNumberChecker();
     } else if (answer == '2') {
-        console.log('\n\tAlright!\nRunning the NumberChecker now:\n')
+        appName = 'NumberChecker'
+        console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runMusicGroupChecker()
     } else if (answer == '3'){
-        console.log('\n\tAlright!\nRunning the MurderMystery Game now:\n')
+        appName = 'NumberChecker'
+        console.log('\n\tAlright!\nRunning the '+ appName +' Game now:\n')
         runMurderMystery();
     } else if (answer == '4'){
-        console.log('\n\tAlright!\nRunning the BalanceChecker now:\n')
+        appName = 'NumberChecker'
+        console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runBalanceChecker();
     } else {
         console.log('Then closing Query instance')
