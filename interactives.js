@@ -195,11 +195,11 @@ function runBalanceChecker() {
                     if (answer == 1) {
                         checkBalance = true;
                         rLII.question('\nWhat is your account balance? ' + 
-                        '\nType your balance here: ', function(answer) {
-                            if (answer > 0) {
-                                balance = answer;
-                                rLII.question()
-                            }
+                                    '\nType your balance here: ', function(answer) {
+                                        if (answer > 0) {
+                                            balance = answer;
+                                            rLII.question('')
+                                        }
                         })
                     } else if (answer == 2) {
                         console.log('Thank you. Have a nice day!')
