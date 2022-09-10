@@ -12,7 +12,7 @@ rLII.question('\n\tWelcome Dear User' +
                 '2. MusicGroupChecker\n' + 
                 '3. MurderMystery Game\n' +
                 '4. BalanceChecker\n', function (answer) {
-                    let appName = '';
+                    let appName = '', questionAsked = '', functionRan = '';
     if (answer == '1'){
         appName = 'NumberChecker'
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
@@ -48,7 +48,10 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         }
 
-        rLII.question('\nWish to check a different number? ',
+        while (appName == 'NumberChecker') {
+            questionAsked = '\nWish to check a different number? '
+            functionRan = runNumberChecker()
+        }rLII.question('\nWish to check a different number? ',
                             function (answer) {
                                 if (answer == 'Yes' || answer == "yes" || answer == 'y'){
                                     console.log('\n\tOkay!\nRunning the NumberChecker again:\n')
