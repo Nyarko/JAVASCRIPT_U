@@ -18,15 +18,15 @@ rLII.question('\n\tWelcome Dear User' +
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runNumberChecker();
     } else if (answer == '2') {
-        appName = 'NumberChecker'
+        appName = 'MusicGroupChecker'
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runMusicGroupChecker()
     } else if (answer == '3'){
-        appName = 'NumberChecker'
+        appName = 'MurderMystery Game'
         console.log('\n\tAlright!\nRunning the '+ appName +' Game now:\n')
         runMurderMystery();
     } else if (answer == '4'){
-        appName = 'NumberChecker'
+        appName = 'BalanceChecker'
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runBalanceChecker();
     } else {
