@@ -194,16 +194,19 @@ function runBalanceChecker() {
                 '\nYour answer: ', function(answer) {
                     if (answer == 1) {
                         checkBalance = true;
-                        rLII.question('\nWhat is your account balance? ' + 
-                                    '\nType your balance here: ', function(answer) {
-                                        if (answer > 0) {
-                                            balance = answer;
-                                            rLII.question('\nIs your account active? ' +
-                                                        '1. Yes\n'+ '2. No\n' + 
-                                                        '\nYour answer: ', function(answer) {
-                                                            if (answer == 1){
-                                                                isActive = true;
+                        //ask account active, then go to ask account balance
+                        rLII.question('\nIs your account active? ' +
+                                    '1. Yes\n'+ '2. No\n' + 
+                                    '\nYour answer: ', function(answer) {
+                                        if (answer == 1) {
+                                            isActive = true;
+                                            rLII.question('\nWhat is your account balance? ' + 
+                                                        '\nType your balance here: ', function(answer) {
+                                                            if (answer > 0){
+                                                                balance = answer;
                                                                 console.log('Your balance is $' + balance +'.')
+                                                            } else if (answer < 0) {
+                                                                console.log('Your account is empty.')
                                                             }
                                                         })
                                         }//if statement close
