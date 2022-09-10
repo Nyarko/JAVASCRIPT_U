@@ -1,3 +1,4 @@
+let appName = '', questionAsked = '', functionRan = '';
 const interact = require("readline");
 
 const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterface({
@@ -12,7 +13,7 @@ rLII.question('\n\tWelcome Dear User' +
                 '2. MusicGroupChecker\n' + 
                 '3. MurderMystery Game\n' +
                 '4. BalanceChecker\n', function (answer) {
-                    let appName = '', questionAsked = '', functionRan = '';
+
     if (answer == '1'){
         appName = 'NumberChecker'
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
