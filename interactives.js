@@ -186,7 +186,8 @@ function runMurderMystery() {
 }
 
 function runBalanceChecker() {
+    let balance = '', isActive = '', checkBalance = '';
     rLII.question('string?', function(answer) {
-        
+
     })
 }
