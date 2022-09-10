@@ -52,20 +52,7 @@ function runNumberChecker() {
             questionAsked = '\nWish to check a different number? '
             functionRan = runNumberChecker()
             goodByeClosing(questionAsked,functionRan,appName)
-        }rLII.question('\nWish to check a different number? ',
-                            function (answer) {
-                                if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                                    console.log('\n\tOkay!\nRunning the NumberChecker again:\n')
-                                    runNumberChecker();
-                                } else {
-                                    console.log('\nUnderstood!')
-                                    console.log("\nClosing the NumberChecker interface")
-                                    console.log('\n\tClosing Query interface')
-                                    console.log('\n************/*/Goodbye/*/***********\n')
-                                    console.log('************************************\n')
-                                    rLII.close()
-                                }
-                            })
+        }
     })
 };
 
