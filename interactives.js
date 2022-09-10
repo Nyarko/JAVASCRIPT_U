@@ -193,12 +193,7 @@ function runBalanceChecker() {
                 '1. Yes\n'+ '2. No\n' + 
                 '\nYour answer: ', function(answer) {
                     if (answer == 1) {
-                        rLII.question('\nIs your account active? ' +
-                        '1. Yes\n'+ '2. No\n' + 
-                        '\nYour answer: ', function(answer) {
-                            if (answer == 1) {
-                                isActive = true;
-                            }
+                        rLII.question(
                         })
                     } else if (answer == 2) {
                         console.log('Thank you. Have a nice day!')
