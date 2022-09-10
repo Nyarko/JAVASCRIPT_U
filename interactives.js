@@ -202,14 +202,19 @@ function runBalanceChecker() {
                                             isActive = true;
                                             rLII.question('\nWhat is your account balance? ' + 
                                                         '\nType your balance here: ', function(answer) {
-                                                            if (answer > 0){
+                                                            if (answer > 0 && isActive === true){
                                                                 balance = answer;
                                                                 console.log('Your balance is $' + balance +'.')
-                                                            } else if (answer < 0) {
+                                                            } else if (answer == 0 && isActive === true) {
                                                                 console.log('Your account is empty.')
+                                                            } else {
+                                                                console.log('Your balance is negative.\nPlease contact bank')
                                                             }
                                                         })
-                                        }//if statement close
+                                        } else if (answer == 2) {
+                                            isActive = false
+                                            console.log('Your account is no longer active')
+                                        }
                         })
                     } else if (answer == 2) {
                         console.log('Thank you. Have a nice day!')
