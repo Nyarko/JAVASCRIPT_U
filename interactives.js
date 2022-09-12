@@ -1,10 +1,37 @@
-let appName = '', questionAsked = '', functionRan = '';
 const interact = require("readline");
 
 const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
+let appName = '', questionAsked = '', functionRan = '';
+
+function goodByeClosing (a, b, c) {
+    const interact = require("readline");
+
+    const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    
+    rLII.question('\n'+ a + 
+                    '1. Yes\n' + '2. No\n' + 
+                    '\nYour answer: ', function (answer) {
+                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
+                            console.log('\n\tOkay!\nRunning the '+ c +' again:\n')
+                            b;
+                        } else if (answer == 'No') {
+                            console.log('\nUnderstood!')
+                            console.log("\nClosing the "+ appName +" interface")
+                            console.log('\n\tClosing Query interface')
+                            console.log('\n************/*/Goodbye/*/***********\n')
+                            console.log('************************************\n')
+                            rLII.close()
+                        }
+                    })
+}
+
 
 rLII.question('\n\tWelcome Dear User' + 
                 '\nWhich APP do you wanna run?\n' + 
@@ -47,13 +74,11 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is even')
         } else {
             console.log('\n' + answer + ' is odd')
-        }
+        };
 
-        if (appName == 'NumberChecker') {
-            questionAsked = '\nWish to check a different number? '
-            functionRan = runNumberChecker()
-            goodByeClosing(questionAsked,functionRan,appName)
-        }
+        questionAsked = 'Wish to check a different number? ';
+        functionRan = runMurderMystery();
+        goodByeClosing(questionAsked, functionRan, appName) ; 
     })
 };
 
@@ -236,20 +261,3 @@ function runBalanceChecker() {
     })
 }
 
-function goodByeClosing (questionAsked,functionRan,appName) {
-    rLII.question(questionAsked + 
-                    '1. Yes\n' + '2. No\n' + 
-                    '\nYour answer: ', function (answer) {
-                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                            console.log('\n\tOkay!\nRunning the '+ appName +' again:\n')
-                            functionRan;
-                        } else {
-                            console.log('\nUnderstood!')
-                            console.log("\nClosing the "+ appName +" interface")
-                            console.log('\n\tClosing Query interface')
-                            console.log('\n************/*/Goodbye/*/***********\n')
-                            console.log('************************************\n')
-                            rLII.close()
-                        }
-                    })
-}
