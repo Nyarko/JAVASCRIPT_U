@@ -5,7 +5,11 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
     output: process.stdout
 });
 
-let appName = '', questionAsked = '', functionRan = '';
+let appName = '', 
+    questionAsked = '\n'+ a + 
+                    '1. Yes\n' + '2. No\n' + 
+                    '\nYour answer: ', 
+    functionRan = '';
 
 function goodByeClosing (a, b, c) {
     const closingInteract = require("readline");
@@ -15,9 +19,7 @@ function goodByeClosing (a, b, c) {
         output: process.stdout
     });
 
-    rLII.question('\n'+ a + 
-                    '1. Yes\n' + '2. No\n' + 
-                    '\nYour answer: ', function (answer) {
+    rLII.question(a, function (answer) {
                         if (answer == 'Yes' || answer == "yes" || answer == 'y'){
                             console.log('\n\tOkay!\nRunning the '+ c +' again:\n')
                             b;
