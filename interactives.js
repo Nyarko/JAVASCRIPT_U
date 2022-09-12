@@ -6,7 +6,7 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
 });
 
 let appName = '', 
-    questionAsked = '\n'+ a + 
+    questionAsked = '\nWish to check a different number? ' + 
                     '1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ', 
     functionRan = '';
@@ -78,7 +78,6 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         };
 
-        questionAsked = 'Wish to check a different number? ';
         functionRan = runMurderMystery();
         goodByeClosing(questionAsked, functionRan, appName) ; 
     })
