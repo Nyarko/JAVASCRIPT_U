@@ -8,13 +8,13 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
 let appName = '', questionAsked = '', functionRan = '';
 
 function goodByeClosing (a, b, c) {
-    const interact = require("readline");
+    const closingInteract = require("readline");
 
-    const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterface({
+    const cIII /*r=read L=Line I=Interface I = Instance */ = closingInteract.createInterface({
         input: process.stdin,
         output: process.stdout
     });
-    
+
     rLII.question('\n'+ a + 
                     '1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ', function (answer) {
@@ -27,7 +27,7 @@ function goodByeClosing (a, b, c) {
                             console.log('\n\tClosing Query interface')
                             console.log('\n************/*/Goodbye/*/***********\n')
                             console.log('************************************\n')
-                            rLII.close()
+                            cIII.close()
                         }
                     })
 }
