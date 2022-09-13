@@ -6,12 +6,12 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
 });
 
 let appName = '', 
-    questionAsked = '\nWish to check a different number? ' + 
+    qAsked = '\nWish to check a different number? ' + 
                     '1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ', 
-    functionRan = '';
+    funcRan = '';
 
-function goodByeClosing (a, b, c) {
+function goodByeClosing (qAsked, b, c) {
     const closingInteract = require("readline");
 
     const cIII /*r=read L=Line I=Interface I = Instance */ = closingInteract.createInterface({
@@ -19,7 +19,7 @@ function goodByeClosing (a, b, c) {
         output: process.stdout
     });
 
-    rLII.question(a, function (answer) {
+    cIII.question(qAsked, function (answer) {
                         if (answer == 'Yes' || answer == "yes" || answer == 'y'){
                             console.log('\n\tOkay!\nRunning the '+ c +' again:\n')
                             b;
@@ -78,8 +78,10 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         };
 
-        functionRan = runMurderMystery();
-        goodByeClosing(questionAsked, functionRan, appName) ; 
+        rLII.pause()
+
+        funcRan = runMurderMystery();
+        goodByeClosing(qAsked, funcRan, appName) ; 
     })
 };
 
