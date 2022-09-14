@@ -50,7 +50,9 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         };
 
-        rLII.question('\nWish to check for a different number? ', function (answer) {
+        rLII.question('\nWish to check a different number? ' + 
+                    '1. Yes\n' + '2. No\n' + 
+                    '\nYour answer: ', function (answer) {
             if (answer == 'Yes' || answer == "yes" || answer == 'y') {
                 appName = 'NumberChecker';
                 runNumberChecker();
