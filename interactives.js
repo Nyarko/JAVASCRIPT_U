@@ -247,7 +247,7 @@ function runBalanceChecker() {
                         console.log('\nThank you. Have a nice day!')
                     }
 
-                    goodByeClosing()
+                    // goodByeClosing()
     })
 }
 
