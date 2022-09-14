@@ -5,36 +5,6 @@ const rLII /*r=read L=Line I=Interface I = Instance */ = interact.createInterfac
     output: process.stdout
 });
 
-let appName = '', 
-    qAsked = '\nWish to check a different number? ' + 
-                    '1. Yes\n' + '2. No\n' + 
-                    '\nYour answer: ', 
-    funcRan = '';
-
-function goodByeClosing (qAsked, b, c) {
-    const closingInteract = require("readline");
-
-    const cIII /*r=read L=Line I=Interface I = Instance */ = closingInteract.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-
-    cIII.question(qAsked, function (answer) {
-                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                            console.log('\n\tOkay!\nRunning the '+ c +' again:\n')
-                            b;
-                        } else if (answer == 'No') {
-                            console.log('\nUnderstood!')
-                            console.log("\nClosing the "+ appName +" interface")
-                            console.log('\n\tClosing Query interface')
-                            console.log('\n************/*/Goodbye/*/***********\n')
-                            console.log('************************************\n')
-                            cIII.close()
-                        }
-                    })
-}
-
-
 rLII.question('\n\tWelcome Dear User' + 
                 '\nWhich APP do you wanna run?\n' + 
                 'Choose by typing the corresponding number:\n' + 
@@ -78,7 +48,7 @@ function runNumberChecker() {
             console.log('\n' + answer + ' is odd')
         };
 
-        rLII.pause()
+        rLII.close();
 
         funcRan = runMurderMystery();
         goodByeClosing(qAsked, funcRan, appName) ; 
