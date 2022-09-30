@@ -119,3 +119,7 @@ if (solved === true) {
 } else {
     console.log('The case is not solved!')
 }
+
+
+//Balance check code
+let balance = '', isActive = false, checkBalance = false;
