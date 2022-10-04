@@ -85,7 +85,7 @@ function runMusicGroupChecker() {
                         console.log('This is a \'Duet\'.')
                     } else if (musicians === 3) {
                         console.log("This is a \'trio\'.");
-                    } else if (musicians === 4) {
+                    } else if (musicians == 4) {
                         console.log("This is a \'quartet\'.");
                     } else {
                         console.log("This is a large group!");
