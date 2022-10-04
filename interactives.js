@@ -91,7 +91,9 @@ function runMusicGroupChecker() {
                         console.log("This is a large group!");
                     }
 
-        rLII.question('\nWish to check for a different group? ',
+        rLII.question('\nWish to check for a different group? '+
+                    '1. Yes\n' + '2. No\n' + 
+                    '\nYour answer: ',
                             function (answer) {
                                 if (answer == 'Yes' || answer == "yes" || answer == 'y'){
                                     console.log('\n\tOkay!\nRunning the MusicGroupChecker again:\n')
