@@ -92,7 +92,7 @@ function runMusicGroupChecker() {
                     }
 
         rLII.question('\nWish to check for a different group? '+
-                    '1. Yes\n' + '2. No\n' + 
+                    '\n1. Yes\n' + '2. No\n' + 
                     '\nYour answer: ',
                             function (answer) {
                                 if (answer == 'Yes' || answer == "yes" || answer == 'y'){
