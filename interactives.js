@@ -13,7 +13,8 @@ rLII.question('\n\tWelcome Dear User' +
                 '1. NumberChecker\n' +
                 '2. MusicGroupChecker\n' + 
                 '3. MurderMystery Game\n' +
-                '4. BalanceChecker\n', function (answer) {
+                '4. BalanceChecker\n' +
+                '5. BinaryToDecimal\n', function (answer) {
 
     if (answer == '1'){
         appName = 'NumberChecker'
@@ -31,6 +32,10 @@ rLII.question('\n\tWelcome Dear User' +
         appName = 'BalanceChecker'
         console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
         runBalanceChecker();
+    }else if (answer == '5'){
+        appName = 'BinaryToDecimal'
+        console.log('\n\tAlright!\nRunning the '+ appName +' now:\n')
+        runBinaryToDecimal();
     } else {
         console.log('Then closing Query instance')
         rLII.close();
@@ -253,6 +258,19 @@ function runBalanceChecker() {
 
                     // goodByeClosing()
     })
+}
+
+function runBinaryToDecimal() {
+    rLII.question(
+        '***********************************\n'+
+                '***********BinaryToDecimal***********\n' + 
+                '\nPlease enter your binary code below\n' +
+                'Your answer: ', function(answer) {
+                    let binaryInput = answer
+                    let decimalOut = parseInt(binaryInput, 2)
+                    console.log('The answer is ' + decimalOut)
+                }
+    )
 }
 
 
