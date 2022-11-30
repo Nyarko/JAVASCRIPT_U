@@ -302,12 +302,14 @@ function runBinaryToDecimal() {
                                     '************Multi Checks************' + 
                                     '\nPlease enter your binary code below\n' +
                                     'Your answer: ', function(answer) {
-                                        let binaryArray [] = answer
-                                        
-                                        let decimalOut = parseInt(binaryInput, 2)
-                                        console.log('The answer is ' + decimalOut)
+                                        let binaryArray = [answer]
+                                        let decimalArray = []
+                                        for (let i = 0; i < binaryArray.length; i++){
+                                            decimalArray[i] = parseInt(binaryArray[i], 2) 
+                                        }
+                                        console.log('The answers are ' + decimalArray)
                     
-                                        rLII.question('Do you wish to do another conversion? \n' + 
+                                        rLII.question('Do you wish to do another batch conversion? \n' + 
                                                                         '1. Yes\n' + '2. No\n' + 
                                                                         '\nYour answer: ', function (answer) {
                                                                             if (answer == 'Yes' || answer == "yes" || answer == 'y'){
