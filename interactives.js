@@ -181,7 +181,9 @@ function runMurderMystery() {
                                     console.log('The case is not solved!\n')
                                 }
                             
-            rLII.question('\nWish to play the game again? ',
+            rLII.question('\nWish to play the game again? '+
+                        '\n1. Yes\n' + '2. No\n' + 
+                        '\nYour answer: ',
                                 function (answer) {
                                     if (answer == 'Yes' || answer == "yes" || answer == 'y'){
                                         console.log('\n\tOkay!\nRunning the MurderMystery Game again:\n')
