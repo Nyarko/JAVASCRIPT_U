@@ -264,8 +264,8 @@ function runBinaryToDecimal() {
     rLII.question('***********************************\n'+
                 '***********BinaryToDecimal***********\n' + 
                 '\nWhat do you wish to do:\n' +
-                '1. Check a single binary number?' +
-                '2. Check multiple binary numners?' +
+                '1. Check a single binary number?\n' +
+                '2. Check multiple binary numners?\n' +
                 'Your answer: ', function(answer) {
                     if (answer == 1) {
                         rLII.question(
