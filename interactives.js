@@ -261,32 +261,7 @@ function runBalanceChecker() {
 }
 
 function runBinaryToDecimal() {
-    rLII.question(
-        '***********************************\n'+
-                '***********BinaryToDecimal***********\n' + 
-                '\nPlease enter your binary code below\n' +
-                'Your answer: ', function(answer) {
-                    let binaryInput = answer
-                    let decimalOut = parseInt(binaryInput, 2)
-                    console.log('The answer is ' + decimalOut)
-
-                    rLII.question('Do you wish to do another conversion? \n' + 
-                                                    '1. Yes\n' + '2. No\n' + 
-                                                    '\nYour answer: ', function (answer) {
-                                                        if (answer == 'Yes' || answer == "yes" || answer == 'y'){
-                                                            console.log('\n\tOkay!\nRunning the BinaryToDecimal again:\n')
-                                                            runBinaryToDecimal();
-                                                        } else {
-                                                            console.log('\nUnderstood!')
-                                                            console.log("\nClosing the BinaryToDecimal interface")
-                                                            console.log('\n\tClosing Query interface')
-                                                            console.log('\n************/*/Goodbye/*/***********\n')
-                                                            console.log('************************************\n')
-                                                            rLII.close()
-                                                        }
-                                                    })
-                }
-    )
+        
 }
 
 
