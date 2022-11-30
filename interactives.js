@@ -261,7 +261,16 @@ function runBalanceChecker() {
 }
 
 function runBinaryToDecimal() {
-        
+    rLII.question('***********************************\n'+
+                '***********BinaryToDecimal***********\n' + 
+                '\nWhat do you wish to do:\n' +
+                '1. Check a single binary number?' +
+                '2. Check multiple binary numners?' +
+                'Your answer: ', function(answer) {
+
+                }
+    
+    )
 }
 
 
