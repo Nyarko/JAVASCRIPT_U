@@ -302,8 +302,9 @@ function runBinaryToDecimal() {
                                     '************Multi Checks************' + 
                                     '\nPlease enter your binary code below\n' +
                                     'Your answer: ', function(answer) {
-                                        let binaryArray = [answer]
+                                        let binaryArray = []
                                         let decimalArray = []
+                                        binaryArray = answer.split(' ')
                                         for (let i = 0; i < binaryArray.length; i++){
                                             decimalArray[i] = parseInt(binaryArray[i], 2) 
                                         }
