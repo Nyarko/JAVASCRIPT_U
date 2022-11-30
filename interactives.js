@@ -300,7 +300,7 @@ function runBinaryToDecimal() {
                             '***********************************\n'+
                                     '***********BinaryToDecimal***********\n' +
                                     '************Multi Checks************' + 
-                                    '\nPlease enter your binary code below\n' +
+                                    '\nPlease enter your binary code blocks below\n' +
                                     'Your answer: ', function(answer) {
                                         let binaryArray = []
                                         let decimalArray = []
