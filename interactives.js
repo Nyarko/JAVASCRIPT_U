@@ -308,7 +308,7 @@ function runBinaryToDecimal() {
                                         for (let i = 0; i < binaryArray.length; i++){
                                             decimalArray[i] = parseInt(binaryArray[i], 2) 
                                         }
-                                        console.log('The answers are ' + decimalArray)
+                                        console.log('The answers are ' + decimalArray.join(' '))
                     
                                         rLII.question('Do you wish to do another batch conversion? \n' + 
                                                                         '1. Yes\n' + '2. No\n' + 
